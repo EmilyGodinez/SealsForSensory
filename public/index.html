@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <title>Seals For Sensory</title>
+        <link rel="icon" href="">
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    
+    <body>
+        <!-- NAVIGATION BAR -->
+        <div class = "navbar">
+            <ul>
+                <li><a href = "#home">Home</a></li>
+                <li><a href = "#places">Places</a></li>
+                <li><a href = "#search">Search</a></li>
+                <li><a href = "#add-place">Add Place</a></li>
+                <li><button id = "theme-button">Toggle Dark Mode</button></li>
+            </ul>
+        </div>
+
+        <!-- HOME PAGE -->
+        <div class = "main-container">
+            <div class = "main-component-1">
+                <div class = "main-description">
+                    <h1 id = "home">Know Before You Go!</h1>
+                    <h4>Want to explore the 7 seas of DFW, but aren't sure how certain places are in terms of sensory levels? 
+                    Sealy and his friends are here to help so that you never have to experience the vast seas alone!
+                    Togeether, we make the seas a better and safer place for seals and explorers alike! 
+                    </h4>
+                </div>
+
+                <img id = "main-image" src="img/sealy-main.png" width="300" height="200">
+            </div>
+
+            <div class = "main-information">
+                    <ul class="sensory-scores">
+                        <li>
+                            <img src="img/bulb.png" width="50" height="50">
+                            <p><strong>Light Levels</strong><br><br>
+                            This rating involves how intense the light fixtures are at this location. This includes both specific areas of intense light and overall lighting.<br><br>
+                            Scale: 1 = little/no lighting to 10 = stepping into a light fixture display store.</p>
+                        </li>
+                        <li>
+                            <img src="img/loud_sound.png" width="50" height="50">
+                            <p><strong>Sound Levels</strong><br><br>
+                            This rating involves how loud a location is in terms of sources such as overhead radios, TVs, and music.<br><br>
+                            Scale: 1 = little/no sound to 10 = rave party-esque levels of music.</p>
+                        </li>
+                        <li>
+                            <img src="img/busts_in_silhouette.png" width="50" height="50">
+                            <p><strong>Crowd Levels</strong><br><br>
+                            This rating involves how many people are usually at this location compared to the size of the space.<br><br>
+                            Scale: 1 = sparse spread to 10 = shoulder-to-shoulder touch nearly all the time.</p>
+                        </li>
+                        <li>
+                            <img src="img/nose.png" width="50" height="50">
+                            <p><strong>Smells</strong><br><br>
+                            This rating involves how intense the smells are, from foods, construction, or air fresheners.<br><br>
+                            Scale: 1 = no distinct smells to 10 = intense scent immediately upon entering.</p>
+                        </li>
+                        <li>
+                            <img src="img/snowflake.png" width="50" height="50">
+                            <p><strong>Temperature Control</strong><br><br>
+                            This rating involves how hot or cold a location is overall. Mention specific areas in your review comments.<br><br>
+                            Scale: Press one of five buttons to describe how cold or hot it feels.</p>
+                        </li>
+                        <li>
+                            <img src="img/bubbles.png" width="50" height="50">
+                            <p><strong>Overall Score</strong><br><br>
+                            Calculated by averaging the light, sound, crowd, and smell scores together.<br><br>
+                            Scale: 1 = beware of intense sensory triggers to 10 = very sensory-friendly.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- SEARCH FUNCTIONALITY/POP-UP -->
+             <div id = "search" class = "search-container">
+                <div class = "search-bar-box">
+                    <img src = "img/finding-seal.png" width = "80" height = "80">
+                    <input type = "text" id = "search-input" placeholder = "Search places by name (e.g., Walmart, Target)...">
+                </div>
+             </div>
+
+             <!-- Condition if No Result Found -->
+              <div id = "no-results" class = "no-results-box" style = "display: none;">
+                    <img src = "img/unsearchable-seal.png" width = "140">
+                    <p>Uncharted waters here. Be the first to help Sealy and friends to venture out together!</p>
+              </div>
+        </div>
+
+        <!-- PLACES PAGE -->
+         <h1 id = "places">Places To Visit</h1>
+        <div class = "place-entry">
+         <div class = "places-container">
+            
+            <div class = "main-description">
+                <h4 style="font-size: 20px;">Walmart - Trinity Mills</h4>
+                <img id = "image1" src="img/Walmart-Trinity-Mills.jpg" width = "300" height = "300">
+            </div>
+            <div class = "place-details">
+                <p>Comment: A chaotic place during the weekends especially. Although there are sensory friendly hours between 8am - 10pm where they turn off all overhead radios/TVs for a more comforable experience.</p>
+                
+                <ul class="place-scores">
+                    <li><img src="img/bulb.png" width="22" height="22"><span> 8/10</span></li>
+                    <li><img src="img/loud_sound.png" width="22" height="22"><span> 7/10</span></li>
+                    <li><img src="img/busts_in_silhouette.png" width="22" height="22"><span> 9/10</span></li>
+                    <li><img src="img/nose.png" width="22" height="22"><span> 5/10</span></li>
+                    <li><img src="img/snowflake.png" width="22" height="22"><span> Cool</span></li>
+                    <li><img src="img/bubbles.png" width="22" height="22"><span> 2.7/10</span></li>
+                </ul>
+
+            </div>
+         </div>
+        </div>
+        <!-- ADD PLACES POP-UP PAGE -->  
+         <div id = "add-place-modal" class = "modal">
+            <div class = "modal-content">
+                <span id = "close-modal" class="close-button">&times;</span>
+                <h1>Add a New Place</h1>
+
+                 <form id="add-place-form">
+                    <label for="place-name">Place Name:</label>
+                    <input type="text" id="place-name" placeholder="e.g., Target - University Dr" required>
+
+                    <label for="place-desc">Description / Comment:</label>
+                    <textarea id="place-desc" rows="3" placeholder="Share sensory details, quiet hours, or tips..." required></textarea>
+
+                    <label for="light-slider">Light Levels: <span id="light-val">5</span>/10</label>
+                    <input type="range" id="light-slider" min="1" max="10" value="5">
+
+                    <label for="sound-slider">Sound Levels: <span id="sound-val">5</span>/10</label>
+                    <input type="range" id="sound-slider" min="1" max="10" value="5">
+
+                    <label for="crowd-slider">Crowd Levels: <span id="crowd-val">5</span>/10</label>
+                    <input type="range" id="crowd-slider" min="1" max="10" value="5">
+
+                    <label for="smell-slider">Smells: <span id="smell-val">5</span>/10</label>
+                    <input type="range" id="smell-slider" min="1" max="10" value="5">
+
+                    <label for="temp-select">Temperature Control:</label>
+                    <select id="temp-select">
+
+                        <option value="Cold">Cold</option>
+                        <option value="Cool">Cool</option>
+                        <option value="Neutral" selected>Neutral</option>
+                        <option value="Warm">Warm</option>
+                        <option value="Hot">Hot</option>
+                    </select>
+
+            <button type="submit" id="submit-place-btn">Add Place Card</button>
+                </form>
+            </div>
+         </div>     
+
+        <script src="index.js"></script>
+    </body>
+</html>
